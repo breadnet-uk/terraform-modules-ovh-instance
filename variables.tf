@@ -5,3 +5,7 @@ variable "sg" {
 variable "name" {
   type = string
 }
+
+variable "home" {
+  type = string
+}

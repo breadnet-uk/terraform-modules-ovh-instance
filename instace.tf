@@ -3,7 +3,7 @@ resource "openstack_compute_instance_v2" "instance" {
   flavor_name = "s1-2"
   key_pair = openstack_compute_keypair_v2.user.name
   image_name = "Ubuntu 18.04"
-  security_groups = [var.sg]
+  security_groups = var.sg
   network {
     port = openstack_networking_port_v2.internet.id
   }
